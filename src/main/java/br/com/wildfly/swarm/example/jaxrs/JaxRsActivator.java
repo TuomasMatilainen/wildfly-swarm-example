@@ -1,0 +1,8 @@
+package br.com.wildfly.swarm.example.jaxrs;
+
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
+
+@ApplicationPath("/")
+public class JaxRsActivator extends Application {
+}
