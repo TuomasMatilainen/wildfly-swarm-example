@@ -33,6 +33,9 @@
 				<groupId>org.wildfly.swarm</groupId>
 				<artifactId>wildfly-swarm-plugin</artifactId>
 				<version>${version.wildfly.swarm}</version>
+				<configuration>
+					<mainClass>br.com.wildfly.swarm.example.Main</mainClass>
+				</configuration>
 				<executions>
 					<execution>
 						<goals>
@@ -63,6 +66,24 @@
 			<groupId>org.wildfly.swarm</groupId>
 			<artifactId>ejb</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.wildfly.swarm</groupId>
+			<artifactId>jpa</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.wildfly.swarm</groupId>
+					<artifactId>h2</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>sqljdbc4</artifactId>
+			<version>4.0</version>
+		</dependency>
+
 	</dependencies>
 
 
